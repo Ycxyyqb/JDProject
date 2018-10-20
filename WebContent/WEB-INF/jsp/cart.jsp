@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-    <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+	pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -134,113 +134,101 @@
     
     </script>
 <body style="background-color: white">
-<!--这是一个商品详情页面-->
-<div id="shortcut">
-        <span>
-                <c:if test="${username==null }">
-                <a href="loginOrRegister.do">你好，请登录</a>
-                   </c:if>
-           <c:if test="${username != null }">
+	<!--这是一个商品详情页面-->
+	<div id="shortcut">
+		<span> <c:if test="${username==null }">
+				<a href="loginOrRegister.do">你好，请登录</a>
+			</c:if> <c:if test="${username != null }">
 				欢迎您，${username }
-			  </c:if>
-            
-			<em class = "sp-line"></em>
-		 </span>
-		 <span>
-             <a href="loginOrRegister.do">免费注册</a><em class = "sp-line"></em>
-         </span>
-        <span>
-            <a href="#">我的订单</a><em class = "sp-line"></em>
-        </span>
-        <span>
-            <a href="#">客户服务</a><em class = "sp-line"></em>
-        </span>
-        <span>
-            <a href="#">关于我</a>
-        </span>
-</div>
+			  </c:if> <em class="sp-line"></em>
+		</span> <span> <a href="loginOrRegister.do">免费注册</a><em
+			class="sp-line"></em>
+		</span> <span> <a href="#">我的订单</a><em class="sp-line"></em>
+		</span> <span> <a href="#">客户服务</a><em class="sp-line"></em>
+		</span> <span> <a href="#">关于我</a>
+		</span>
+	</div>
 
-<div id="logoImage">
-    <a href="index.do">
-    <img src="img/jdlogo.png">
-    </a>
+	<div id="logoImage">
+		<a href="index.do"> <img src="img/jdlogo.png">
+		</a>
 
-</div>
+	</div>
 
-<div id = "header">
-    <!--商品搜索div-->
-    <div id="searchDiv">
-        <form class=" navbar-static-top " id="searchForm" role="search" method="post" action=" search.do">
-            <input type="text" class="form-control" id="searchInput" placeholder="数码3c" name="keyword">
+	<div id="header">
+		<!--商品搜索div-->
+		<div id="searchDiv">
+			<form class=" navbar-static-top " id="searchForm" role="search"
+				method="post" action=" search.do">
+				<input type="text" class="form-control" id="searchInput"
+					placeholder="数码3c" name="keyword">
 
-            <!-- 这是需要添加过滤条件-->
-            <button type="submit" class="btn btn-default" id="searchBtn">搜索</button>
+				<!-- 这是需要添加过滤条件-->
+				<button type="submit" class="btn btn-default" id="searchBtn">搜索</button>
 
-        </form>
-    </div>
-</div>
- <c:if test="${username == null }">
-	    <div class="noLoginTip">
-	        <span class="warningIcon"></span>
-	        <span class="warningText"> 您还没有登录！登录后购物车的商品将保存到您账号中</span>
-	        <a href="${pageContext.request.contextPath }/loginOrRegister.do"><span class="warningBtn">立即登录</span></a>
-	    </div>
-    </c:if>
+			</form>
+		</div>
+	</div>
+	<c:if test="${username == null }">
+		<div class="noLoginTip">
+			<span class="warningIcon"></span> <span class="warningText">
+				您还没有登录！登录后购物车的商品将保存到您账号中</span> <a
+				href="${pageContext.request.contextPath }/loginOrRegister.do"><span
+				class="warningBtn">立即登录</span></a>
+		</div>
+	</c:if>
 
-<div class="showCart">
-    <div>
-        <div class="chooseAll">
-            <input type="checkbox">&nbsp;&nbsp;全选
-        </div>
-        <div class="goods">商品</div>
-        <div class="price">单价</div>
-        <div class="number">数量</div>
-        <div class="money">小计</div>
-        <div class="operator">操作</div>
-    </div>
-</div>
-<!--购物车列表-->
-  <div id="cartList">
-    
-    	<c:forEach items="${SESSION_CART }" var="cartItem">
-	    	<div class="item">
-	            <!--这是一个用户保存商品id-->
-	            <input class="cid" hidden value="${cartItem.value.id }" name = "id">
-	            <div class="itemCheckboxDiv">
-	                <input type="checkbox">
-	            </div>
-	            <div class="itemImgDiv">
-	                <img src="img/cart_img01.jpg">
-	            </div>
-	            <div class="itemDescDiv">
-	                	${cartItem.value.title }
-	            </div>
-	            <div class="itemPriceDiv">
-	                	￥<span>${cartItem.value.price/100.0 }</span>
-	            </div>
-	            <div class="itemChooseNumberDiv">
-	                <div class="sub">
-	                    -
-	                </div>
-	                <div class="number">
-	                    <input type="text" value="${cartItem.value.num }">
-	                </div>
-	                <div class="add">
-	                    +
-	                </div>
-	            </div>
-	            <div class="itemMoneyDiv">
-	              	  ￥<span style="font-size: 16px;">${cartItem.value.price*cartItem.value.num/100.0 }</span>
-	            </div>
-	            <div class="itemOperatorDiv">
-	                <span>删除</span>
-	            </div>
-	        </div>
-    	</c:forEach>
-        <c:if test="${fn:length(SESSION_CART) == 0}">
-		    <div style = "color:#cccccc; margin:100px 0px 500px 600px; font-size:16px;"><h3>您没有添加任何商品！</h3></div>
+	<div class="showCart">
+		<div>
+			<div class="chooseAll">
+				<input type="checkbox">&nbsp;&nbsp;全选
+			</div>
+			<div class="goods">商品</div>
+			<div class="price">单价</div>
+			<div class="number">数量</div>
+			<div class="money">小计</div>
+			<div class="operator">操作</div>
+		</div>
+	</div>
+	<!--购物车列表-->
+	<div id="cartList">
+
+		<c:forEach items="${SESSION_CART }" var="cartItem">
+			<div class="item">
+				<!--这是一个用户保存商品id-->
+				<input class="cid" hidden value="${cartItem.value.id }" name="id">
+				<div class="itemCheckboxDiv">
+					<input type="checkbox">
+				</div>
+				<div class="itemImgDiv">
+					<img src="img/cart_img01.jpg">
+				</div>
+				<div class="itemDescDiv">${cartItem.value.title }</div>
+				<div class="itemPriceDiv">
+					￥<span>${cartItem.value.price/100.0 }</span>
+				</div>
+				<div class="itemChooseNumberDiv">
+					<div class="sub">-</div>
+					<div class="number">
+						<input type="text" value="${cartItem.value.num }">
+					</div>
+					<div class="add">+</div>
+				</div>
+				<div class="itemMoneyDiv">
+					￥<span style="font-size: 16px;">${cartItem.value.price*cartItem.value.num/100.0 }</span>
+				</div>
+				<div class="itemOperatorDiv">
+					<span>删除</span>
+				</div>
+			</div>
+		</c:forEach>
+		<c:if test="${fn:length(SESSION_CART) == 0}">
+			<div
+				style="color: #cccccc; margin: 100px 0px 500px 600px; font-size: 16px;">
+				<h3>您没有添加任何商品！</h3>
+			</div>
 		</c:if>
-        
-    </div>
+
+	</div>
 </body>
 </html>

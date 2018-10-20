@@ -1,129 +1,134 @@
-body,ul,ol,li,p,h1,h2,h3,h4,h5,h6,form,fieldset,table,td,img,div,dl,dt,dd,input,span,i,a{
-    margin: 0;
-    padding: 0;
-}
-body{
-    background-color: #d9d9d9;
-    width: 1349px;
-}
-a,a:hover{
-    text-decoration: none;
+body, ul, ol, li, p, h1, h2, h3, h4, h5, h6, form, fieldset, table, td,
+	img, div, dl, dt, dd, input, span, i, a {
+	margin: 0;
+	padding: 0;
 }
 
-/*Í·²¿ÇøÓòÑùÊ½*/
-
-#shortcut{
-    text-align: right;
-    padding-right: 40px;
-    height: 30px;
-    line-height: 30px;
-    background-color: #e3e4e5;
-
-}
-#shortcut span{
-    color: #999999;
-    display: inline-block;
-    padding-bottom: 30px;
+body {
+	background-color: #d9d9d9;
+	width: 1349px;
 }
 
-#shortcut span a{
-    color: #999999;
-    text-decoration: none;
-}
-#shortcut span a:hover{
-    color: #e33333;
-    text-decoration: none;
-}
-.sp-line{
-    display: inline-block;
-    margin:5px 10px 0 10px ;
-    width: 1px;
-    line-height: 10px;
-    height: 10px;
-    background-color: #ccc;
-}
-/*½áÊøÍ·²¿ÇøÓòÑùÊ½*/
-
-#header{
-    width: 100%;
-    height: 140px;
-    /*border: 1px solid red;*/
-
+a, a:hover {
+	text-decoration: none;
 }
 
-#logoImage{
-    /*height: 170px;*/
-    /*width: 190px;*/
-    margin-top: 20px;
-    margin-left: 100px;
-    float: left;
-    /*border: 1px solid red;*/
-}
-#header #logoImage img{
-
-    box-shadow:0 0 10px 0 #bbb;
-}
-/*ËÑË÷¿òµÄÑùÊ½¿ªÊ¼*/
-#searchDiv{
-    /*border: 1px solid red;*/
-}
-#searchForm{
-    padding-top: 20px;
-}
-#searchInput{
-    margin-left: 176px;
-    display: inline-block;
-    width: 500px;
-    height: 40px;
-}
-#searchBtn{
-    display: inline-block;
-    height: 40px;
-    width: 60px;
-    margin-left: -2px;
-    margin-top: -2px;
-    font-size: 14px;
+/*Í·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½*/
+#shortcut {
+	text-align: right;
+	padding-right: 40px;
+	height: 30px;
+	line-height: 30px;
+	background-color: #e3e4e5;
 }
 
-
-#hotwords{
-    position: absolute;
-    left: 420px;
-    top: 90px;
-    color: #999999;
-    width: 550px;
-    height: 20px;
-    line-height: 20px;
-    font-size: 12px;
-    margin-top: 5px;
+#shortcut span {
+	color: #999999;
+	display: inline-block;
+	padding-bottom: 30px;
 }
 
-#navitems{
-    font-size: 15px;
-    height: 60px;
-
-    /*border: 1px solid red;*/
-
+#shortcut span a {
+	color: #999999;
+	text-decoration: none;
 }
-#navitems #spans{
-    left: 320px;
-    top: 90px;
-    position: absolute;
-    /*	border: 1px solid red;*/
 
+#shortcut span a:hover {
+	color: #e33333;
+	text-decoration: none;
 }
+
+.sp-line {
+	display: inline-block;
+	margin: 5px 10px 0 10px;
+	width: 1px;
+	line-height: 10px;
+	height: 10px;
+	background-color: #ccc;
+}
+/*ï¿½ï¿½ï¿½ï¿½Í·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½*/
+#header {
+	width: 100%;
+	height: 140px;
+	/*border: 1px solid red;*/
+}
+
+#logoImage {
+	/*height: 170px;*/
+	/*width: 190px;*/
+	margin-top: 20px;
+	margin-left: 100px;
+	float: left;
+	/*border: 1px solid red;*/
+}
+
+#header #logoImage img {
+	box-shadow: 0 0 10px 0 #bbb;
+}
+/*ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½Ê¼*/
+#searchDiv {
+	/*border: 1px solid red;*/
+	
+}
+
+#searchForm {
+	padding-top: 20px;
+}
+
+#searchInput {
+	margin-left: 176px;
+	display: inline-block;
+	width: 500px;
+	height: 40px;
+}
+
+#searchBtn {
+	display: inline-block;
+	height: 40px;
+	width: 60px;
+	margin-left: -2px;
+	margin-top: -2px;
+	font-size: 14px;
+}
+
+#hotwords {
+	position: absolute;
+	left: 420px;
+	top: 90px;
+	color: #999999;
+	width: 550px;
+	height: 20px;
+	line-height: 20px;
+	font-size: 12px;
+	margin-top: 5px;
+}
+
+#navitems {
+	font-size: 15px;
+	height: 60px;
+
+	/*border: 1px solid red;*/
+}
+
+#navitems #spans {
+	left: 320px;
+	top: 90px;
+	position: absolute;
+	/*	border: 1px solid red;*/
+}
+
 #navitems span {
-    height: 20px;
-    display: inline-block;
-    margin:40px 10px 0 10px;
-
+	height: 20px;
+	display: inline-block;
+	margin: 40px 10px 0 10px;
 }
-#navitems span a{
-    color: #333333;
-    display: inline-block;
-    text-decoration: none;
 
+#navitems span a {
+	color: #333333;
+	display: inline-block;
+	text-decoration: none;
 }
-#navitems span a:hover{
-    color: red;
+
+#navitems span a:hover {
+	color: red;
 }
