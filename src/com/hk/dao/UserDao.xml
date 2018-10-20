@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hk.dao.UserDao">
+	<!-- 根据用户名和密码查询用户是否存在 -->
+	<select id="findUser" resultType="user">
+		select * from tb_user where username =#{username} and password=#{password};
+	</select>
+	<!-- 添加一条记录 -->
+	<insert id="addUser" parameterType="user">
+		insert into tb_user values
+		(null,#{username},#{password},#{phone},#{email},#{created},#{updated});
+	</insert>
+	<!-- 根据用户查询用户信息 -->
+	<select id="findUserByUsername" parameterType="String"
+		resultType="user">
+		select * from tb_user where username = #{username};
+	</select>
+</mapper>

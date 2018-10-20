@@ -1,0 +1,90 @@
+.successHeader{
+    border-bottom: 2px solid red;
+}
+.successHeader .successText{
+    margin-left: 80px;
+    height: 33px;
+    width: 190px;
+    background-color: #f30213;
+    color: white;
+    text-align: center;
+    line-height: 33px;
+    font-size: 15px;
+
+}
+.successDetail{
+    height: 145px;
+    background-color: #f5f5f5;
+    padding-left: 80px;
+    padding-top: 20px;
+}
+.successDetail .succ{
+    height: 25px;
+    line-height: 25px;
+    /*border: 1px solid red;*/
+}
+.successDetail .succ .succ_icon{
+
+    /*border: 1px solid blue;*/
+    float: left;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    overflow: hidden;
+    background: url(../img/addtocart-icons.png) 0 0 no-repeat;
+}
+.successDetail .succ .succ_txt{
+
+    /*float: left;*/
+    display: inline-block;
+    margin-left: 10px;
+    color: #71b247;
+    height: 25px;
+    font-size: 18px;
+    line-height: 25px;
+    /*font-weight: 400;*/
+}
+.successDetail .desc{
+    margin-top: 20px;
+}
+.successDetail .desc img{
+    float: left;
+    margin-right: 10px;
+
+}
+
+.successDetail .desc p{
+    color: #333333;
+    font-family: "Microsoft YaHei;
+    line-height: 28px;
+    white-space: nowrap;
+    font-size: 14px;
+
+}
+.successDetail .desc .toCart{
+    width: 168px;
+    height: 36px;
+    float: right;
+    margin-top: -30px;
+    margin-right: 70px;
+    background-color: #e4393c;
+    color: white;
+    line-height: 36px;
+    /*text-align: center;*/
+    padding-left: 30px;
+    font-size: 16px;
+    position: relative;
+}
+.successDetail .desc .toCart:hover{
+    background-color: #c91623;
+}
+.successDetail .desc .toCart .rightIcon{
+    display: inline-block;
+    width: 10px;
+    height: 20px;
+    position: absolute;
+    top: 8px;
+    right: 15px;
+    overflow: hidden;
+    background: url(../img/addtocart-icons.png) -20px -81px no-repeat;
+}

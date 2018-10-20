@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:p="http://www.springframework.org/schema/p"
+    xmlns:mvc="http://www.springframework.org/schema/mvc"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:mybatis="http://mybatis.org/schema/mybatis-spring"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+        http://www.springframework.org/schema/mvc
+        http://www.springframework.org/schema/mvc/spring-mvc-4.3.xsd     
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context-4.3.xsd
+        http://mybatis.org/schema/mybatis-spring 
+		http://mybatis.org/schema/mybatis-spring.xsd ">
+	<!-- spring -->
+	<!-- 扫描并注册Service -->
+	<context:component-scan base-package="com.hk.service"></context:component-scan>
+	
+	<!-- spring mvc -->
+	<!-- 扫描并注册Controller -->
+	<context:component-scan base-package="com.hk.controller"></context:component-scan>
+  	<!-- 视图解析器 -->
+  	<bean name="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+  		<property name="prefix" value="/WEB-INF/jsp/"/>
+  		<property name="suffix" value=".jsp"/>
+  	</bean>
+  	
+  	<!-- mybatis -->
+  	<!-- 扫描注册mapper -->
+  	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+  		<property name="basePackage" value="com.hk.dao"/>
+  	</bean>
+  	<!-- 指定Druid数据源 -->
+  	<bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">
+  		<property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+  		<property name="url" value="jdbc:mysql://localhost:3306/shop?characterEncoding=UTF-8"/>
+  		<property name="username" value="root"/>
+  		<property name="password" value="123456"/>
+  	</bean>
+  	<!-- 集成mybatis -->
+  	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+  		<property name="dataSource" ref="dataSource"></property>
+  		<property name="configLocation" value="classpath:mybatis-config.xml" />
+  	</bean>
+  	
+  	<context:annotation-config />  
+    <mvc:annotation-driven />
+</beans>  

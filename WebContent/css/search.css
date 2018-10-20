@@ -1,0 +1,313 @@
+body,ul,ol,li,p,h1,h2,h3,h4,h5,h6,form,fieldset,table,td,img,div,dl,dt,dd,input,span,i,a{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #d9d9d9;
+    width: 1349px;
+}
+a,a:hover{
+    text-decoration: none;
+}
+
+/*头部区域样式*/
+
+#shortcut{
+    text-align: right;
+    padding-right: 40px;
+    height: 30px;
+    line-height: 30px;
+    background-color: #e3e4e5;
+
+}
+#shortcut span{
+    color: #999999;
+    display: inline-block;
+    padding-bottom: 30px;
+}
+
+#shortcut span a{
+    color: #999999;
+    text-decoration: none;
+}
+#shortcut span a:hover{
+    color: #e33333;
+    text-decoration: none;
+}
+.sp-line{
+    display: inline-block;
+    margin:5px 10px 0 10px ;
+    width: 1px;
+    line-height: 10px;
+    height: 10px;
+    background-color: #ccc;
+}
+/*结束头部区域样式*/
+
+#header{
+    width: 100%;
+    height: 140px;
+    /*border: 1px solid red;*/
+
+}
+
+#logoImage{
+    /*height: 170px;*/
+    /*width: 190px;*/
+    margin-top: 20px;
+    margin-left: 100px;
+    float: left;
+    /*border: 1px solid red;*/
+}
+#header #logoImage img{
+
+    box-shadow:0 0 10px 0 #bbb;
+}
+/*搜索框的样式开始*/
+#searchDiv{
+    /*border: 1px solid red;*/
+}
+#searchForm{
+    padding-top: 20px;
+}
+#searchInput{
+    margin-left: 176px;
+    display: inline-block;
+    width: 500px;
+    height: 40px;
+}
+#searchBtn{
+    display: inline-block;
+    height: 40px;
+    width: 60px;
+    margin-left: -2px;
+    margin-top: -2px;
+    font-size: 14px;
+}
+
+
+#hotwords{
+    position: absolute;
+    left: 420px;
+    top: 90px;
+    color: #999999;
+    width: 550px;
+    height: 20px;
+    line-height: 20px;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+#navitems{
+    font-size: 15px;
+    height: 60px;
+
+    /*border: 1px solid red;*/
+
+}
+#navitems #spans{
+    left: 320px;
+    top: 90px;
+    position: absolute;
+    /*	border: 1px solid red;*/
+
+}
+#navitems span {
+    height: 20px;
+    display: inline-block;
+    margin:40px 10px 0 10px;
+
+}
+#navitems span a{
+    color: #333333;
+    display: inline-block;
+    text-decoration: none;
+
+}
+#navitems span a:hover{
+    color: red;
+}
+/*过滤条件样式开始*/
+.searchContent{
+    /*border: 1px solid #f1f1f1;*/
+
+    margin-left: 65px;
+    padding-right: 65px;
+    /*padding-left: 85px;*/
+
+}
+.searchContent .filter{
+    padding-left: 50px;
+    height: 38px;
+    line-height: 38px;
+    background-color: #f1f1f1;
+    border-bottom:2px solid red;
+    margin-bottom: 10px;
+}
+.searchContent .filter a{
+    margin: 0px;
+    padding: 0px;
+}
+.searchContent .filter a .isActive{
+    margin-left: -5px;
+    display: inline-block;
+    width: 68px;
+    height: 26px;
+    color: white;
+    /*font-weight: bold;*/
+    line-height: 25px;
+    text-align: center;
+    background-color: #e4393c;
+    border: 1px solid #e4393c;
+}
+.searchContent .filter a .isActive i{
+    display: inline-block;
+    width: 7px;
+    background: url(../img/sprite-arrow.png) no-repeat 0 -120px;
+    overflow: hidden;
+    height: 11px;
+    margin-top: 6px;
+
+}
+.searchContent .filter a .isNotActive{
+    margin-left: -5px;
+    display: inline-block;
+    width: 68px;
+    height: 26px;
+    color: black;
+    /*font-weight: bold;*/
+    line-height: 25px;
+    text-align: center;
+    background-color: white;
+    border: 1px solid #cccccc;
+}
+.searchContent .filter a .isNotActive i{
+    display: inline-block;
+    width: 7px;
+    background: url(../img/sprite-arrow.png) no-repeat 0px -100px;
+    overflow: hidden;
+    height: 11px;
+    margin-top: 6px;
+
+}
+.searchContent .filter .itemCount{
+    display: inline-block;
+    float: right;
+    padding-right: 20px;
+}
+.searchContent .filter .itemCount span{
+    margin-right: 20px;
+}
+.searchContent .filter .itemCount a{
+    text-decoration: none;
+}
+.searchContent .filter .itemCount i{
+    text-align: center;
+    width: 58px;
+    display: inline-block;
+    color: #bbbbbb;
+    line-height: 26px;
+    height: 28px;
+    margin-left: -5px;
+}
+.searchContent .filter .itemCount .previousPage{
+
+    border: 1px solid #cccccc;
+}
+.searchContent .filter .itemCount .nextPage{
+
+    background-color: white;
+    border: 1px solid #cccccc;
+
+
+}
+/*过滤条件样式结束*/
+
+/*搜索结果展示样式开始*/
+.searchContent .items{
+    /*border: 1px solid blue;*/
+}
+.searchContent .items .item{
+
+    float: left;
+    /*display: inline-block;*/
+    /*margin-left: 1px;*/
+    /*border: 1px solid green;*/
+    padding: 15px 10px 0px 10px;
+    width: 240px;
+    height: 434px;
+    margin-top: 30px;
+}
+.searchContent .items .item:hover{
+    border-color: #e9e9e9;
+    box-shadow: 0 0 2px 2px #dddddd;
+}
+.searchContent .items .item .price{
+    margin-top: 30px;
+    color: #e4393c;
+    font-size: 20px;
+    padding-left: 5px;
+}
+.searchContent .items .item .desc{
+    color: #666666;
+    font-size: 12px;
+    text-align: left;
+    margin-top: 10px;
+    line-height: 20px;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    height: 40px;
+    padding-left: 10px;
+}
+.searchContent .items .item .collect{
+    margin-top: 5px;
+    color: #a7a7a7;
+    padding-left: 10px;
+}
+
+.searchContent .items .item .selfSupport {
+    margin-top: 25px;
+    display: inline-block;
+    width: 34px;
+    height: 16px;
+    line-height: 16px;
+    border-radius: 3px;
+    text-align: center;
+    color: white;
+    padding: 0 3px;
+    margin-right: 3px;
+    overflow: hidden;
+    font-style: normal;
+    font-size: 12px;
+    background: #e23a3a;
+    cursor: default;
+    margin-left: 10px;
+
+}
+.searchContent .items .item .new {
+    margin-top: 25px;
+    display: inline-block;
+    width: 34px;
+    height: 16px;
+    line-height: 16px;
+    border-radius: 3px;
+    text-align: center;
+    color: white;
+    padding: 0 3px;
+    margin-right: 3px;
+    overflow: hidden;
+    font-style: normal;
+    font-size: 12px;
+    background: #31c19e;
+    cursor: default;
+
+}
+
+/*作者信息展示模块*/
+#authorInfo{
+    margin-top: 50px;
+    margin-bottom: 20px;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+}

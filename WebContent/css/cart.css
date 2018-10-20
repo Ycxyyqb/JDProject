@@ -1,0 +1,304 @@
+body,ul,ol,li,p,h1,h2,h3,h4,h5,h6,form,fieldset,table,td,img,div,dl,dt,dd,input,span,i,a{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #d9d9d9;
+    width: 1349px;
+}
+a,a:hover{
+    text-decoration: none;
+}
+
+/*头部区域样式*/
+
+#shortcut{
+    text-align: right;
+    padding-right: 40px;
+    height: 30px;
+    line-height: 30px;
+    background-color: #e3e4e5;
+
+}
+#shortcut span{
+    color: #999999;
+    display: inline-block;
+    padding-bottom: 30px;
+}
+
+#shortcut span a{
+    color: #999999;
+    text-decoration: none;
+}
+#shortcut span a:hover{
+    color: #e33333;
+    text-decoration: none;
+}
+.sp-line{
+    display: inline-block;
+    margin:5px 10px 0 10px ;
+    width: 1px;
+    line-height: 10px;
+    height: 10px;
+    background-color: #ccc;
+}
+/*结束头部区域样式*/
+
+#header{
+    width: 100%;
+    height: 140px;
+    /*border: 1px solid red;*/
+
+}
+
+#logoImage{
+    /*height: 170px;*/
+    /*width: 190px;*/
+    margin-top: 20px;
+    margin-left: 180px;
+    float: left;
+    /*border: 1px solid red;*/
+    position: relative;
+}
+#header #logoImage img{
+    box-shadow:0 0 10px 0 #bbb;
+}
+#logoImage .cartText{
+    display: inline-block;
+    position: absolute;
+    top: 12px;
+    width: 100px;
+    height: 40px;
+    line-height: 99em;
+    background: url(../img/cart-icon.png) #fff no-repeat;
+
+}
+/*搜索框的样式开始*/
+#searchDiv{
+    display: inline-block;
+    /*border: 1px solid red;*/
+}
+#searchForm{
+    padding-top: 20px;
+}
+#searchInput{
+    margin-left: 156px;
+    display: inline-block;
+    width: 500px;
+    height: 40px;
+}
+#searchBtn{
+    display: inline-block;
+    height: 40px;
+    width: 60px;
+    margin-left: -2px;
+    margin-top: -2px;
+    font-size: 14px;
+}
+.noLoginTip{
+    margin-left: 180px;
+    width: 990px;
+    height: 48px;
+    border: 1px solid #edd28b;
+    background: #fffdee;
+    padding: 10px 20px;
+    line-height: 25px;
+    margin-bottom: 20px;
+    color: #f70;
+}
+.noLoginTip .warningIcon{
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+    width: 16px;
+    height: 16px;
+    overflow: hidden;
+    background: url(../img/icon16.png) 0 0 no-repeat;
+/*    border: 1px solid red;*/
+}
+.noLoginTip .warningText{
+    color: #ff7700;
+
+}
+.noLoginTip .warningBtn{
+    background-color:#e64346 ;
+    display: inline-block;
+    width: 68px;
+    height: 25px;
+    color: white;
+    text-align: center;
+    line-height: 25px;
+    margin-left: 10px;
+    border-radius: 5px;
+}
+
+/*显示购物车的样式*/
+.showCart{
+    background-color: #f3f3f3;
+    width: 990px;
+    height: 45px;
+    margin-left: 180px;
+    padding-left: 10px;
+    border: 1px solid #e0e0e0;
+    margin-bottom: 50px;
+}
+.showCart .chooseAll{
+    width: 133px;
+    height:43px;
+    background-color: #f3f3f3;
+    float: left;
+    line-height: 43px;
+    /*border-right: 1px solid red;*/
+}
+.showCart .goods{
+    width: 378px;
+    height:43px;
+    background-color: #f3f3f3;
+    float: left;
+    line-height: 43px;
+    /*border-right: 1px solid red;*/
+}
+.showCart .price{
+    width: 160px;
+    height:43px;
+    background-color: #f3f3f3;
+    float: left;
+    text-align: center;
+    padding-left: 55px;
+    line-height: 43px;
+    /*border-right: 1px solid red;*/
+    padding-right: 40px;
+}
+.showCart .number{
+    width: 80px;
+    height:43px;
+    background-color: #f3f3f3;
+    float: left;
+    text-align: center;
+    line-height: 43px;
+   /* border-right: 1px solid red;*/
+}
+
+.showCart .money{
+    width: 140px;
+    height:43px;
+    background-color: #f3f3f3;
+    float: left;
+    text-align: center;
+    padding-left: 65px;
+    line-height: 43px;
+    /*border-right: 1px solid red;*/
+    padding-right: 30px;
+}
+.showCart .operator{
+    line-height: 43px;
+    width: 70px;
+    height:43px;
+    background-color: #f3f3f3;
+    float: left;
+    /*border-right: 1px solid red;*/
+}
+.item{
+    margin-left: 180px;
+    width: 990px;
+    height: 120px;
+    border: 1px solid #f1f1f1;
+    border-bottom: 1px solid #cccccc;
+    border-radius: 15px;
+
+}
+.item .itemCheckboxDiv{
+    margin-left: 10px;
+    width: 20px;
+    height: 20px;
+    margin-top: 30px;
+    /*border: 1px solid #cccccc;*/
+    float: left;
+}
+.item .itemImgDiv{
+    float: left;
+    margin-top: 20px;
+    margin-left: 5px;
+    border: 1px solid #eeeeee;
+}
+.item .itemDescDiv{
+    margin-top: 20px;
+    width: 210px;
+    height: 100px;
+    float: left;
+    color: #333333;
+    margin-left: 20px;
+    font-size: 13px;
+   /* border: 1px solid red;*/
+}
+.item .itemPriceDiv{
+    width: 160px;
+    float: left;
+    margin-left: 220px;
+    margin-top: 40px;
+    color: #333333;
+    /*border: 1px solid red;*/
+}
+.item .itemChooseNumberDiv{
+    line-height: 22px;
+    text-align: center;
+    margin-top: 40px;
+
+}
+.item .itemChooseNumberDiv .sub{
+    float: left;
+    width: 17px;
+    height: 22px;
+    border: 1px solid #cacbcb;
+    margin-left: -40px;
+}
+.item .itemChooseNumberDiv .sub:hover{
+    cursor: pointer;
+}
+.item .itemChooseNumberDiv .number{
+    float: left;
+    width: 44px;
+    height: 22px;
+    /*border: 1px solid #cacbcb;*/
+    margin-left: -24px;
+}
+.item .itemChooseNumberDiv .number input{
+    text-align: center;
+    width: 44px;
+    border: 1px solid #cacbcb;
+    height: 22px;
+}
+
+.item .itemChooseNumberDiv .add{
+    float: left;
+    margin-left: -1px;
+    width: 17px;
+    height: 22px;
+    border: 1px solid #cacbcb;
+}
+.item .itemChooseNumberDiv .add:hover{
+    cursor: pointer;
+}
+.item .itemMoneyDiv{
+    float: left;
+    margin-left: 50px;
+    font-weight: bold;
+}
+.item .itemOperatorDiv{
+    float: left;
+    margin-left: 30px;
+
+}
+.item .itemOperatorDiv:hover{
+    cursor: pointer;
+    color: #e64346;
+}
+
+/*作者信息展示模块*/
+#authorInfo{
+    margin-top: 150px;
+    margin-bottom: 20px;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+}
